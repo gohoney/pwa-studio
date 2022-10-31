@@ -28,7 +28,26 @@ const FilterSidebar = React.lazy(() =>
     import('../../components/FilterSidebar')
 );
 
+import { useNavigation } from '@magento/peregrine/lib/talons/Navigation/useNavigation';
+import CategoryTree from '../../components/CategoryTreepc';
+
 const CategoryContent = props => {
+    const {
+        catalogActions,
+        handleBack,
+        handleClose,
+        hasModal,
+        isOpen,
+        isTopLevel,
+        setCategoryId,
+        showCreateAccount,
+        showForgotPassword,
+        showMainMenu,
+        showMyAccount,
+        showSignIn,
+        view
+    } = useNavigation();
+
     const {
         categoryId,
         data,
@@ -155,14 +174,13 @@ const CategoryContent = props => {
             <StoreTitle>{categoryName}</StoreTitle>
             <article className={classes.root} data-cy="CategoryContent-root">
                 <div className={classes.categoryHeader}>
-                    <h1 aria-live="polite" className={classes.title}>
-                        <div
-                            className={classes.categoryTitle}
-                            data-cy="CategoryContent-categoryTitle"
-                        >
-                            {categoryTitle}
-                        </div>
-                    </h1>
+                    {/*categoryName || '...'*/}                       
+                    <CategoryTree
+                        categoryId={categoryId}
+                        onNavigate={handleClose}
+                        setCategoryId={setCategoryId}
+                        updateCategories={catalogActions.updateCategories}
+                    />
                     {categoryDescriptionElement}
                 </div>
                 <div className={classes.contentWrapper}>

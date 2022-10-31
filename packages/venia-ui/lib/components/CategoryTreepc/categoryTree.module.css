@@ -1,0 +1,27 @@
+.root {
+    background-color: white;
+    color: rgb(var(--venia-global-color-text));
+    margin: 0;
+    padding: 0;
+}
+
+.tree {
+    margin-top: 0px;
+    border-bottom: solid 1.5px #f2f2f2;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+
+.leaf {
+}
+
+.branch {
+}
+
+.inactive {
+    composes: fixed from global;
+    composes: invisible from global;
+}
