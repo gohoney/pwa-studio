@@ -79,4 +79,7 @@
     composes: lg_self-start from global;
     composes: lg_pt-16 from global;
     composes: lg_w-filterSidebarWidth from global;
+    top: 100px; /*此修改是为了对齐右边的商品显示大页面*/
+    position: sticky; /*增加一个相对于父元素的一个锚点，否则position sticksy无效*/
+
 }

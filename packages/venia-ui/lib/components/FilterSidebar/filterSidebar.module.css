@@ -20,6 +20,8 @@
     composes: pb-0 from global;
     composes: pt-5 from global;
     composes: px-5 from global;
+    margin-right: 2rem;
+    background-color: #f2f2f2  /*增加的底色*/
 }
 
 .headerTitle {
@@ -47,6 +49,9 @@
     composes: pb-0 from global;
     composes: pt-xs from global;
     composes: px-xs from global;
+    
+    margin-right: 2rem;
+    background-color: #f2f2f2  /*增加的底色*/
 }
 
 /* TODO @TW: cannot compose */
