@@ -1,12 +1,14 @@
 .root {
     /* Permanent height to prevent pop-in. */
-    composes: h-[2.5rem] from global;
-    composes: mt-xs from global;
+    /*composes: h-[2.5rem] from global; 无效掉 下面复制改变数值节省空间*/
+    /*composes: mt-xs from global;无效掉 下面复制改变数值xs=1rem 修改成具体数值节省空间*/
+    composes: h-[1.5rem] from global;
+    composes: mt-[0.5rem] from global;
     composes: ml-xs from global;
     /* Show ellipses when overflowing. */
     composes: overflow-hidden from global;
     composes: overflow-ellipsis from global;
-    composes: pt-[0.625rem] from global;
+    /*composes: pt-[0.625rem] from global;*/
     composes: pb-[1rem] from global;
     composes: text-sm from global;
     composes: whitespace-nowrap from global;

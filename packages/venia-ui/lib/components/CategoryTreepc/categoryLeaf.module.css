@@ -1,5 +1,5 @@
 .root {
-    composes: border-b from global;
+    /*composes: border-b from global; # 这条是无效掉分类页面子分类显示下划线*/
     composes: border-solid from global;
     composes: border-subtle from global;
     composes: flex from global;
@@ -33,7 +33,7 @@
 .link {
     white-space: nowrap;
 }
-
+/*增加鼠标移到子分类显示响应下划红线*/
 .link:hover,
 .link:focus,
 .linkActive {
@@ -41,5 +41,5 @@
     text-decoration-color: #FF8C00;
     -moz-text-decoration-color: #FF8C00; /* 针对 Firefox 的代码 */
     text-decoration-thickness: 2px;
-    text-underline-offset: 5px;
+    text-underline-offset: 2px;
 }

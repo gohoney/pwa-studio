@@ -21,7 +21,7 @@
 .categoryTitle {
     composes: font-light from global;
     composes: leading-snug from global;
-    composes: pb-xs from global;
+    /*composes: pb-xs from global;  # 分类标题下面去掉空间，以节省空间*/
     composes: text-colorDefault from global;
     composes: text-center from global;
     composes: text-xl from global;
@@ -74,7 +74,6 @@
 
 .sidebar {
     composes: hidden from global;
-
     composes: lg_flex from global;
     composes: lg_self-start from global;
     composes: lg_pt-16 from global;

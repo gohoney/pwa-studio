@@ -174,13 +174,23 @@ const CategoryContent = props => {
             <StoreTitle>{categoryName}</StoreTitle>
             <article className={classes.root} data-cy="CategoryContent-root">
                 <div className={classes.categoryHeader}>
-                    {/*categoryName || '...'*/}                       
-                    <CategoryTree
-                        categoryId={categoryId}
-                        onNavigate={handleClose}
-                        setCategoryId={setCategoryId}
-                        updateCategories={catalogActions.updateCategories}
-                    />
+                    <h1 aria-live="polite" className={classes.title}>
+                        <div
+                            className={classes.categoryTitle}
+                            data-cy="CategoryContent-categoryTitle"
+                        >
+                            {categoryTitle}
+                        </div>
+                    </h1>
+                    <div
+                    >
+                        <CategoryTree
+                            categoryId={categoryId}
+                            onNavigate={handleClose}
+                            setCategoryId={setCategoryId}
+                            updateCategories={catalogActions.updateCategories}
+                        />
+                    </div>
                     {categoryDescriptionElement}
                 </div>
                 <div className={classes.contentWrapper}>
